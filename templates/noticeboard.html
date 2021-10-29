@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<main>
+		<div class="noticeboard">
+			{% comment %} {%for vacancy in vacancies %}
+			<div class="vacancy">
+				<h2>Job vacancy </h2>
+				<img src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/{{vacancy.image}}">
+			</div>
+			{% endfor %} {% endcomment %}
+			{% for notice in notices %}
+			<div class="notice">
+			<h2>Notice</h2>
+			<h3>{{notice.title}}</h3>
+			<p>Dear {{notice.to}},</p>
+			<p>{{notice.detail}}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</main>		
+{% endblock content %}

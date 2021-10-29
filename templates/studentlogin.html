@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<main>
+		<div class="login">
+			<img class="svg-image" src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/images/unlock.png" >
+			<div class="form-below-image">
+				{% if error %}
+    				<h3 class="error-message">{{ error }}</h3>
+    			{% endif %}
+				<form action="{% url 'studentlogin' %}" method="POST">
+					{% csrf_token %}
+					<label class="dark-font" for="username">Username:</label>
+					<input type="name" name="username" placeholder="Username"><br><br>
+					<label class="dark-font">Password:</label>
+					<input type="Password" name="password" placeholder="Password"><br><br><br>
+					<hr>
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+		   
+			  
+				  
+			  
+	</main>		
+{% endblock content %}
+
+
+

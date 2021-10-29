@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+	<main class="showcase">
+		
+		<video src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/images/video.mp4" muted loop autoplay></video>
+		<div class="overlay"></div>
+		<div class="text">
+			<h2>"{% trans 'Together, may we give our dear children' %}</h2>
+			<h2> the roots to grow and the wings to fly"</h2>
+			<p>Call Us On:</p>
+			<span itemprop="telephone">
+				<a class="phone-link" href="tel:+977-057412777"><img class="logo-image phone-logo" src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/images/phone.png" width="35px" height="35px">977-057412777</a>
+	        </span>
+	    </div>
+	</main>
+{% endblock content %}

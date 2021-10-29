@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title class='nowwrap'>Kamane&nbsp;Academy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	
+	
+
+</head>
+<body>	
+	<nav class="sides">
+		<div class="logo logo-n-title">  
+			<img class="logo-image" src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/images/kamanelogo.jpg" width="100%" height="50%">
+			<h1 id="title" class="sides">KAMANE ACADEMY</h1>
+			<!-- <p>A bilingual progressive school, base in Hetauda</p> -->
+		</div>
+		<ul class="nav-links">
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<div class="dropdown">
+			    <button class="dropbtn">About Us 
+			      <i class="fa fa-caret-down"></i>
+			    </button>
+			    <div class="dropdown-content">
+			      <a href="{% url 'vision' %}">Mision, Vision and Goals</a>
+			      <a href="{% url 'curriculum' %}">Curriculum</a>
+			      <a href="{% url 'schedule' %}">Schedule</a>
+			      <a href="{% url 'environment' %}">Global Wisdom Projects</a>
+			      <a href="{% url 'contact' %}">Contact us</a>
+			    </div>
+			</div>
+			<li><a href="{% url 'noticeboard' %}">Notice Board</a></li>
+			{% if user.is_authenticated%}
+			<li><a href="{% url 'student' %}">Student Board</a></li>
+			{% else %}
+			<li><a href="{% url 'studentlogin' %}">Student Board</a></li>
+			{% endif %}
+			
+		</ul>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</nav>
+    <main>
+        {% block content %}
+
+
+        {% endblock content %}
+    </main>
+	
+	<footer class="sides">
+	
+		<a href="https://www.facebook.com/kamaneacademy" target="_blank"><img class="logo-image" src="https://kamaneacademy.s3.eu-west-2.amazonaws.com/static/images/facebook-icon.png"></a>
+	
+	</footer>
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

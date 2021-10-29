@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+/* common style start  */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+		/* helps to make footer stick to the bottom */
+html {
+	height: 100%
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	background: #d6af2b;
+	background-repeat: no-repeat;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: space-between;
+	margin-right: 5PX;
+
+	
+}
+
+main {
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+}
+
+		/* make font look like kids handwriting */
+h1 {
+	font-size: 1rem;
+	font-family: 'Schoolbell', cursive;
+}
+
+h2 {
+	text-align: center
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgb(227, 141, 34);
+		/* controls the space between nav-links */
+	width: 100%;
+	min-height: 8vh;
+	background-color: rgb(227, 141, 34);
+	z-index: 1000;
+	position: sticky;
+	top: 0;
+	
+
+	
+}
+	/* style start for dropdown menu */
+		/* the dropdown button takes some of button tag css because it is button */
+.dropbtn {
+	background-size: cover;
+	font-size: 1rem;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: black;
+	background: #E3DD22;
+}
+
+		/* the list of links within dropdown wont appear because of display:none  */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1
+}
+		/* style for anchor elements inside list of dropdown menu */
+.dropdown-content a {
+  float: none;
+  color: black;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background: #d6af2b;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+		/* when hovered to .dropdown, change display of dropdown-content from none to block  */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+	/* style end for dropdown menu  */
+
+.sides {
+	padding-left: 3%;
+	padding-right: 3%
+}
+
+.logo {
+	color: #1B211C;
+
+}
+
+.logo-image {
+	height: 30px;
+	width: 30px;
+}
+		/* for kamanelogo and the name of the school */
+.logo-n-title {
+	display: flex;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	width: 60%;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	
+}
+nav-links a {
+	color: black;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+li {
+	list-style: none
+}
+	/* burger lines style start */
+.burger div{
+	height: 3px;
+	width: 45px;
+	background-color: white;
+	margin: 5px;
+	
+}
+		/* keep burgerlines invisible in bigger screen  */
+.burger {
+	display: none;
+
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: rgb(227, 141, 34);
+	z-index: 1000;
+	margin-top: auto;
+	position:fixed;
+	bottom: 0;
+	right: 0;
+	height: 8vh;
+}
+
+	/* burger line style end */
+/* common style end  */
+
+/* home page style start  */
+.dark-font {
+	color: #37376D;
+	font-weight: 17rem;
+	letter-spacing: 0.70em;
+	font-family: 'Anton', sans-serif;
+}
+
+video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	top: 0;
+	left: 0;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #19211C;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: overlay;
+}
+
+.text {
+	font-family: 'Anton', sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.5rem;
+	color: #25A12D;
+	position: absolute;
+	bottom: 30vh;
+	padding-left: 10%;
+	padding-right: 50%
+}
+.phone-link{
+	background: rgba(227, 141, 34, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 250px;
+	margin-top: 3%;
+}
+.phone-logo {
+	background-color: black;
+	border-radius: 50%;
+}
+.image-div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+img {
+	width: 90%;
+	height: 70%;
+	margin-left: 5%;
+	margin-right: 5%
+}
+/* homepage style end  */
+
+
+/* noticeboard.html style start */
+.noticeboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-items: space-between;
+	min-height: 1000px
+}
+
+.vacancy  {
+	margin-top: 3%
+}
+
+.notice {
+	margin-bottom: 3%;
+	background: black;
+	color: white;
+	height: 40vh;
+	width: 80%;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.medium-image {
+	height: 250px;
+	width: 250px;
+}
+/* noticeboard.htmlstyle end  */
+
+/* student login page style start  */
+.svg-image {
+	width: 50%;
+	height: 50%
+}  
+
+.login{
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	position: absolute;
+	top: 10vh;
+	left: 10vw;
+	align-items: center
+}
+
+.form-below-image {
+	width: 50%;
+	display: flex;
+	font-size: 1.5em;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around
+}
+
+button {
+	background-size: cover;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bolder;
+	margin-top: 1%; 
+	cursor: pointer;
+	text-transform: uppercase
+}
+
+button:hover {
+	transform: scale(1.1);
+	background: #37376D
+}
+
+input {
+	width: 80%;
+	height: 30px;
+	text-align: center;
+	font-size: 0.5em
+}
+
+.error-message {
+	color: red;
+	font-size: 10px;
+}
+/* student login page style end  */
+
+
+/* student.html/result page style start  */
+.result {
+	margin: 2% 3% 0 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-between
+}
+.apolozy-message {
+	font-size: 1.5rem;
+	text-align: center
+}
+
+.no-result-show {
+	background: #d6af2b;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+
+}
+.greetings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+	
+}
+/* student.html style end  */
+
+/* all of pages in about dropdown menu pages style start  */
+.about-divs {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 3% 15% 3% 15%;
+	padding: 0 5% 3% 5%;
+	text-align: center;
+	font-size: 15px;
+
+	font-family: 'Schoolbell', cursive;
+	height: auto
+}
+
+
+/* .mission-image-background {
+	background-image: url('../images/kids jumpin edited.jpg')
+} */
+
+/* .curriculum-image-background {
+	background-image: url('../images/color pencil border.jpg')
+} */
+
+/* .schedule-image-background {
+	background-image: url('../images/watch.jpg')
+} */
+
+/* .environment-image-background {
+	background-image: url('../images/kids-behind-river.jpg'); 
+	
+} */
+
+/* all of pages in about dropdown menu pages style end  */
+
+/* contact form css  */
+
+
+#container {
+	background-color: lightblue;
+	width: 45%;
+	margin: auto;
+	padding: 40px;
+  }
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form input[type="tel"],
+  #contact-form input[type="url"],
+  #contact-form textarea {
+	width: 96%;
+	box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-webkit-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	-moz-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin-bottom: 15px;
+	padding: 10px;
+  }
+  
+  #contact-form button[type="submit"] {
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	background: #991D57;
+	background-image: linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+	background-image: -moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+	background-image: -webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+	color: #FFF;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+/* google map in contact page  */
+.map {
+	margin-top: 3vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+  
+@media screen and (max-width: 1040px) {
+	.nav-links {
+		width: 60%;
+	}
+
+	.login {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	.svg-image {
+		width: 50%;
+		height: 25%;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	body{
+		overflow-x: hidden;
+		
+	}
+
+	.about-divs {
+		font-size: 20px;
+		margin: 0;
+	}
+	
+
+	nav {
+		position: static;
+	}
+
+	.nav-links {
+		position: absolute;
+		right: 0px;
+		height: 70vh;
+		top: 7vh;
+		background: rgb(227, 141, 34);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 45%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+
+	.nav-links li {
+		opacity: 0;
+	}
+
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
+
+	a {
+		color: black;
+		font-weight: bolder;
+		text-transform: capitalize;
+	}
+	
+	.nav-active {
+		transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+
+	
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-6px,6px);
+
+}
+.toggle .line2 {
+	opacity: 0;
+
+}
+
+.toggle .line3 {
+	transform: rotate(50deg) translate(-6px,-6px);
+
+}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<main>	
+			<!--Schedule-->
+		<div class="about-divs">
+				<h2>Schedule</h2>
+				{% for schedule in schedules%}
+				<!-- <h3>Preschool</h3> -->
+				<h3>{{schedule.heading}}</h3>
+				
+				<!-- <p>The school begins at 9:45am and closes at 3:00pm.<br>
+				-The classes start with morning meeting of 10 to 20 minutes.
+				 During the morning meeting students take turn to read aloud
+				  morning message of the day which leads to class discussions.</p><br> -->
+				  <p>{{schedule.paragraph1}}</p>
+				  {% if schedule.paragraph2 != null %}
+				  	<p>{{schedule.paragraph2}}</p>
+				  {% endif %}
+				  
+					{% if schedule.paragraph3 != null %}
+					<p>{{schedule.paragraph3}}</p>
+					{% endif %}
+				  {% endfor %}
+				<!-- <p>-The morning meeting is led by action rhymes and developmental games.<br>
+				</p>
+			    <p>-After the above rituals, the children engage in intensive
+					 theme based experiential activities.<br>
+				-They get snack break from 12:30 to 1:10.<br>
+				-Lower KG and upper KG have separate periods for language and math lessons.
+				 Nursery has only 30 minutes each day allocated for teacher led lessons.<br>
+				-The students prepare to get ready for home from 2:30 to 2:45.<br>
+					-The class-teachers peacefully read aloud to them before they leave class at 3:00.<br></p>
+			
+				<h3>Early Primary ( Grades 1 to 3)</h3>
+				<p>The school begins at 9:45am and closes at 3:30pm
+				– After the 15 minutes assembly classes start with morning meeting from 10:00 to 10:20.
+				 The students take turn to read message/question of the day. This leads to discussion on
+				  that day’s lead activity.
+				– After the morning meeting students engage in various theme based activities from 10:20 to 11:00.
+				– There are separate periods for languages ( Nepali and English) and Math.
+				– They get snack break from 1:10 to 2:00.
+				– The students get ready for departure at 3:10.
+				– The class-teachers reads aloud to them before they leave classroom at 3:30</p>
+				<h3>Upper Primary ( Grades 4 to 8)</h3>
+				<p>The school begins at 9:45 am and closes at 4:00 pm
+				– After the 15 minutes assembly classes start with morning meeting from 10:00 to 10:20. The students take turn to read message/question of the day. This leads to discussion on that day’s lead activity on Science or Social Studies.
+				– They get snack break from 1:10 to 2:00.
+				– Grades 4 and 5 get three periods in a week for free play.
+				– Grades 4 and 5 have flexible lesson schedules that can vary from day to day while grades 6 and upwards have fixed one hour twenty minutes periods allocated for each subjects on alternative basis.</p>
+		</div> -->
+	</main>
+{% endblock content %}
+	
